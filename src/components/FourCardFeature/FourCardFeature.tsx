@@ -1,10 +1,20 @@
+import { useState } from "react";
 import FeatureCard from "../FeatureCard/FeatureCard";
 import styles from "./FourCardFeature.module.css";
 
 export default function FourCardFeature() {
+  const [gridLayoutActive, setGridLayoutActive] = useState<boolean>(false);
+
   return (
     <section className={styles.FourCardFeature}>
       <section className={styles.TextSection}>
+        <button
+          type="button"
+          className={styles.ToggleBtn}
+          onClick={() => setGridLayoutActive((prev) => !prev)}
+        >
+          {gridLayoutActive ? "Grid" : "Flexbox"} layout
+        </button>
         <h2 className={styles.Title}>
           <span className={`${styles.LightTitle} TextPresetTwo`}>
             Reliable, efficient delivery
@@ -18,7 +28,11 @@ export default function FourCardFeature() {
           points to ensure that your project is successful
         </p>
       </section>
-      <section className={styles.CardGroupLayout}>
+      <section
+        className={`${
+          gridLayoutActive ? styles.CardGroupGrid : styles.CardGroupFlex
+        }`}
+      >
         <FeatureCard
           cardTitle="Supervisor"
           cardDesc="Monitors activity to identify project roadblocks"
@@ -26,7 +40,11 @@ export default function FourCardFeature() {
           ImgAlt="Magnifying glass icon"
           BorderColor="Cyan"
         />
-        <div className={styles.CardPairLayout}>
+        <div
+          className={`${
+            gridLayoutActive ? styles.CardPairGrid : styles.CardPairFlex
+          }`}
+        >
           <FeatureCard
             cardTitle="Team Builder"
             cardDesc="Scans our talent network to create the optimal team for your project"
