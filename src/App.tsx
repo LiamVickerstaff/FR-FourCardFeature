@@ -1,12 +1,13 @@
-import './App.css'
+import "./App.css";
+import FourCardFeature from "./components/FourCardFeature/FourCardFeature";
 
 function App() {
-
   return (
-    <>
-      <h1>Frontend Mentor - Four Card Feature Solution</h1>
-    </>
-  )
+    <main>
+      <h1>Frontend Mentor - Four Card Feature Solution By Liam V</h1>
+      <FourCardFeature />
+    </main>
+  );
 }
 
-export default App
+export default App;

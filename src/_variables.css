@@ -1,0 +1,74 @@
+:root {
+  /* Color */
+  --color-white: hsl(0deg, 0%, 100%);
+  --color-grey-400: hsl(212deg, 6%, 44%);
+  --color-grey-500: hsl(234deg, 12%, 34%);
+  --color-red: hsl(0deg, 78%, 62%);
+  --color-cyan: hsl(180deg, 62%, 55%);
+  --color-blue: hsl(212deg, 86%, 64%);
+  --color-orange: hsl(34deg, 97%, 64%);
+
+  /* Spacings */
+
+  --size-100: 0.5rem;
+  --size-200: 1rem;
+  --size-300: 1.5rem;
+  --size-400: 2rem;
+  --size-500: 2.5rem;
+
+  /* Typography */
+  --font-family: "Poppins", sans-serif;
+}
+
+/* Mobile Fonts */
+
+.TextPresetOne,
+.TextPresetTwo,
+.TextPresetThree,
+.TextPresetFour,
+.TextPresetFive {
+  font-family: var(--font-family);
+}
+
+.TextPresetOne {
+  font-size: var(--size-300);
+  line-height: 140%;
+  letter-spacing: 0.25px;
+  font-weight: 600;
+  color: var(--color-grey-500);
+}
+
+.TextPresetTwo {
+  font-size: var(--size-300);
+  line-height: 140%;
+  letter-spacing: 0.25px;
+  font-weight: 200;
+  color: var(--color-grey-500);
+}
+
+.TextPresetThree {
+  font-size: 1.25rem;
+  line-height: 135%;
+  font-weight: 600;
+}
+
+.TextPresetFour {
+  font-size: 15px;
+  line-height: 140%;
+  font-weight: 400;
+  color: var(--color-grey-500);
+}
+.TextPresetFive {
+  font-size: 13px;
+  line-height: 160%;
+  font-weight: 400;
+}
+
+/* Desktop Fonts */
+
+@media (min-width: 48rem) {
+  .TextPresetOne,
+  .TextPresetTwo {
+    font-size: 2.25rem;
+  }
+}
